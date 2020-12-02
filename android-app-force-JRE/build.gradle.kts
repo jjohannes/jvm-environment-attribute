@@ -10,7 +10,7 @@ android {
 }
 
 configurations.maybeCreate("releaseRuntimeClasspath").apply {
-    attributes.attribute(JvmEnvironment.JVM_ENVIRONMENT_ATTRIBUTE, objects.named(JvmEnvironment.DESKTOP))
+    attributes.attribute(JvmEnvironment.JVM_ENVIRONMENT_ATTRIBUTE, objects.named(JvmEnvironment.STANDARD_JVM))
 }
 
 dependencies {

@@ -7,7 +7,7 @@ abstract class JvmEnvironment : Named {
 
     companion object {
         val JVM_ENVIRONMENT_ATTRIBUTE = Attribute.of("org.gradle.jvm.environment", JvmEnvironment::class.java)
-        const val DESKTOP = "desktop"
+        const val STANDARD_JVM = "standard-jvm"
         const val ANDROID = "android"
     }
 }

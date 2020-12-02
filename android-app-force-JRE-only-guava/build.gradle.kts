@@ -14,7 +14,7 @@ dependencies {
     constraints {
         implementation("com.google.guava:guava") {
             // can do it like this for transitives, could also do it directly on the dependency above
-            attributes { attribute(JvmEnvironment.JVM_ENVIRONMENT_ATTRIBUTE, objects.named(JvmEnvironment.DESKTOP)) }
+            attributes { attribute(JvmEnvironment.JVM_ENVIRONMENT_ATTRIBUTE, objects.named(JvmEnvironment.STANDARD_JVM)) }
         }
     }
 }
