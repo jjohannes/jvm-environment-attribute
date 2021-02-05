@@ -1,8 +1,6 @@
-import org.gradle.api.attributes.java.JvmEnvironment
-
 plugins {
-    id("org.gradle.jvm-environment-attribute-support")
     id("com.android.application") version "4.1.1"
+    id("agp-patch")
 }
 
 android {
@@ -10,7 +8,7 @@ android {
 }
 
 configurations.maybeCreate("releaseRuntimeClasspath").apply {
-    attributes.attribute(JvmEnvironment.JVM_ENVIRONMENT_ATTRIBUTE, objects.named(JvmEnvironment.STANDARD_JVM))
+    attributes.attribute(TargetJvmEnvironment.TARGET_JVM_ENVIRONMENT_ATTRIBUTE, objects.named(TargetJvmEnvironment.STANDARD_JVM))
 }
 
 dependencies {

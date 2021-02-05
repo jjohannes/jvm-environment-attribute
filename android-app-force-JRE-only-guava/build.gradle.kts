@@ -1,8 +1,6 @@
-import org.gradle.api.attributes.java.JvmEnvironment
-
 plugins {
-    id("org.gradle.jvm-environment-attribute-support")
     id("com.android.application") version "4.1.1"
+    id("agp-patch")
 }
 
 android {
@@ -14,7 +12,7 @@ dependencies {
     constraints {
         implementation("com.google.guava:guava") {
             // can do it like this for transitives, could also do it directly on the dependency above
-            attributes { attribute(JvmEnvironment.JVM_ENVIRONMENT_ATTRIBUTE, objects.named(JvmEnvironment.STANDARD_JVM)) }
+            attributes { attribute(TargetJvmEnvironment.TARGET_JVM_ENVIRONMENT_ATTRIBUTE, objects.named(TargetJvmEnvironment.STANDARD_JVM)) }
         }
     }
 }

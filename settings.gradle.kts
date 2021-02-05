@@ -10,9 +10,8 @@ pluginManagement {
             }
         }
     }
+    includeBuild("agp-patch-plugin")
 }
-
-includeBuild("jvm-environment-attribute-plugin")
 
 dependencyResolutionManagement {
     repositories {
@@ -21,7 +20,6 @@ dependencyResolutionManagement {
         google()
     }
 }
-
 
 rootProject.name = "jvm-environment-attribute"
 include("java-app")
