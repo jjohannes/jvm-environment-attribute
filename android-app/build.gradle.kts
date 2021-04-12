@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.application") version "4.1.1"
+    id("com.android.application") version "7.0.0-alpha14"
     id("agp-patch")
 }
 
